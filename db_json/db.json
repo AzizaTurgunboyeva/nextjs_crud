@@ -1,13 +1,6 @@
 {
   "students": [
     {
-      "id": "1",
-      "firstName": "Hoshim",
-      "lastName": "Mirzayev",
-      "birthDate": "11-11-2011",
-      "classId": 2
-    },
-    {
       "id": "1746186798757",
       "firstName": "Ziyodbek",
       "lastName": "Akhmadjonov",
@@ -15,11 +8,11 @@
       "classId": "1"
     },
     {
-      "id": "1746186862783",
-      "firstName": "Kimdir",
-      "lastName": "Nimayev",
-      "birthDate": "2025-05-17",
-      "classId": "1"
+      "id": "1746444497022",
+      "firstName": "Abror",
+      "lastName": "Abduazimov",
+      "birthDate": "1976-02-07",
+      "classId": ""
     }
   ],
   "classes": [
@@ -32,13 +25,18 @@
   ],
   "teachers": [
     {
-      "id": "1",
-      "firstName": "Lola",
-      "lastName": "Ahmedova",
-      "classes": [
-        1
-      ],
-      "birthDate": "11-11-1989"
+      "id": "1746684714450",
+      "firstName": "Asila",
+      "lastName": "Aliqulova",
+      "birthDate": "2002-12-10",
+      "classes": []
+    },
+    {
+      "id": "1746684986204",
+      "firstName": "Aziza",
+      "lastName": "Turg'unboyeva",
+      "birthDate": "2005-12-05",
+      "classes": []
     }
   ],
   "school": {

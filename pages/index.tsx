@@ -1,4 +1,5 @@
-import { Table } from "@/components";
+import { Button, Table } from "@/components";
+import { Container, Title } from "./Home.styled";
 
 export default function Home() {
 
@@ -44,55 +45,14 @@ export default function Home() {
   ]
 
   return (
-    <>
-      <h1>Hello World!</h1>
-      <button onClick={handleClick}>Change User</button>
+    <Container>
+      <Title>Hello World!</Title>
+      <Button onClick={handleClick} >Change User</Button>
 
       <Table columns={columns} dataSrc={users} />
-    </>
+    </Container>
   );
 }
 
-// ToDo app -
-// Users CRUD -
-// Dashboard to manage School +
 
-/*
- model student 
-{
-  id: 0,
-  firstName: "",
-  lastName: "",
-  birthDate: "",
-  classId: "",
-}
 
-model teacher
-{
-  id: 0,
-  firstName: ""
-  lastName: "",
-  classes: [2, 4, 6],
-  birthDate: ""
-}
-
-model class 
-{
-  id: 0,
-  name: "",
-  studentCount: 21,
-  teacherId: 2,
-}
-
-model school
-{
-  id: 0,
-  name: "",
-  location: "",
-  overallStudentCount: 123,
-  overallStaffCount: 21,
-  overallClassCount: 2,
-  about: "",
-  phoneNumber: "+998952343378",
-}
-*/

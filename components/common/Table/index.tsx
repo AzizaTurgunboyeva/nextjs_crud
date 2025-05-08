@@ -3,7 +3,7 @@ import { TableProps } from './types'
 import { TableWrapper } from './Table.styles';
 
 const Table: FC<TableProps> = (props) => {
-	const { columns = [], dataSrc = [], loading = true } = props;
+	const { columns = [], dataSrc = [], loading = true, actionsCol = () => null } = props;
 
 	const loadingContent = dataSrc.length === 0 && !!loading
 		? <tr>
@@ -23,7 +23,7 @@ const Table: FC<TableProps> = (props) => {
 				<thead>
 					<tr>
 						{columns.map(column => (
-							<th key={column.dataIndex}>{column.title}</th>
+							<th style={{ width: `${column.width}%` }} key={column.dataIndex}>{column.title}</th>
 						))}
 					</tr>
 				</thead>
@@ -32,9 +32,11 @@ const Table: FC<TableProps> = (props) => {
 					{emptyContent}
 					{dataSrc.map(data => (
 						<tr key={data[columns[0]?.dataIndex]}>
-							{columns.map(col => (
-								<td key={col.dataIndex}>{data[col.dataIndex]}</td>
-							))}
+							{columns.map(col => {
+								return col.dataIndex === "actions"
+									? <td style={{ width: `${col.width}%` }} key={col.dataIndex}>{actionsCol(data)}</td>
+									: <td style={{ width: `${col.width}%` }} key={col.dataIndex}>{data[col.dataIndex]}</td>
+							})}
 						</tr>
 					))}
 				</tbody>

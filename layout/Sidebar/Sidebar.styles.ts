@@ -8,6 +8,7 @@ export const SidebarWrapper = styled.nav`
 
     .logo {
         padding: 10px;
+        padding-top: 8px;
         height: 55px;
         display: flex;
         align-items: center;
